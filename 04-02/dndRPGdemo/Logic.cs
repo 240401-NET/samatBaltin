@@ -1,0 +1,5 @@
+namespace dndRPGdemo;
+
+class Logic{
+    
+}
