@@ -37,16 +37,16 @@ class Record{
     public override string ToString()
     {
         return $"Date: {DateNow.ToString("dd'/'MM'/'yyyy")};" +
-        "\nBody Weight: {Weight}lb;" +
-        "\nBMI: {BMI};" +
-        "\nMuscle Mass: {MuscleMass}lb;" +
-        "\nFat Mass: {FatMass}lb;" +
-        "\nWater Mass: {WaterMass}lb;" +
-        "\nGlucose Level: {Glucose}mg/dl;" +
-        "\nKetones Level: {Ketones}mg/dl;" +
-        "\nBlood Presure: {SystolicBloodPresure}/{DiastolicBloodPresure};" +
-        "\nBathroom Taken: {BathroomTaken} times;" +
-        "\nBottles of Water Consumed: {Botles} botles;" +
-        "\nHow I feel Today: {Symptoms}";
+        $"\nBody Weight: {Weight}lb;" +
+        $"\nBMI: {BMI};" +
+        $"\nMuscle Mass: {MuscleMass}lb;" +
+        $"\nFat Mass: {FatMass}lb;" +
+        $"\nWater Mass: {WaterMass}lb;" +
+        $"\nGlucose Level: {Glucose}mg/dl;" +
+        $"\nKetones Level: {Ketones}mg/dl;" +
+        $"\nBlood Presure: {SystolicBloodPresure}/{DiastolicBloodPresure};" +
+        $"\nBathroom Taken: {BathroomTaken} times;" +
+        $"\nBottles of Water Consumed: {Botles} botles;" +
+        $"\nHow I feel Today: {Symptoms}";
     }
 }
