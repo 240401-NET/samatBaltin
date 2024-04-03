@@ -4,6 +4,7 @@ class Record{
 
     public DateTime DateNow {get; set;}
     public double Weight {get; set;}
+    public double BMI {get; set;}
     public double MuscleMass {get; set;}
     public double FatMass {get; set;}
     public double WaterMass {get; set;}
@@ -15,9 +16,11 @@ class Record{
     public int Botles {get; set;}
     public string Symptoms {get; set;}
 
-    public Record(double weight, double muscleMass, double fatMass, double waterMass, int glucose, int ketones, int sbp, int dbp, int bathroomTaken, int botles, string symptoms){
+    //Constructor
+    public Record(double weight, double bmi, double muscleMass, double fatMass, double waterMass, int glucose, int ketones, int sbp, int dbp, int bathroomTaken, int botles, string symptoms){
         this.DateNow = DateTime.Today;
         this.Weight = weight;
+        this.BMI = bmi;
         this.MuscleMass = muscleMass;
         this.FatMass = fatMass;
         this.WaterMass = waterMass;
@@ -30,8 +33,20 @@ class Record{
         this.Symptoms = symptoms;
     }
 
+    //Convert record object to string
     public override string ToString()
     {
-        return $"Date: {DateNow.ToString("dd'/'MM'/'yyyy")};\nBody Weight: {Weight}lb;\nMuscle Mass: {MuscleMass}lb;\nFat Mass: {FatMass}lb;\nWater Mass: {WaterMass}lb;\nGlucose Level: {Glucose}mg/dl;\nKetones Level: {Ketones}mg/dl;\nBlood Presure: {SystolicBloodPresure}/{DiastolicBloodPresure};\nBathroom Taken: {BathroomTaken} times;\nBottles of Water Consumed: {Botles} botles;\nHow I feel Today: {Symptoms}";
+        return $"Date: {DateNow.ToString("dd'/'MM'/'yyyy")};" +
+        "\nBody Weight: {Weight}lb;" +
+        "\nBMI: {BMI};" +
+        "\nMuscle Mass: {MuscleMass}lb;" +
+        "\nFat Mass: {FatMass}lb;" +
+        "\nWater Mass: {WaterMass}lb;" +
+        "\nGlucose Level: {Glucose}mg/dl;" +
+        "\nKetones Level: {Ketones}mg/dl;" +
+        "\nBlood Presure: {SystolicBloodPresure}/{DiastolicBloodPresure};" +
+        "\nBathroom Taken: {BathroomTaken} times;" +
+        "\nBottles of Water Consumed: {Botles} botles;" +
+        "\nHow I feel Today: {Symptoms}";
     }
 }
