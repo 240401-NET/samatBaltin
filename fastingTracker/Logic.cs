@@ -15,7 +15,7 @@ class Logic{
     }
 
     public static Record GenerateRecord(){
-        Console.WriteLine($"Hi! Today is {DateTime.Today.ToString("dd'/'MM'/'yyyy")}. Please enter your Weight");
+        Console.WriteLine($"Hi! Today is {DateTime.Today.ToString("dd'/'MM'/'yyyy")}.");
         Console.WriteLine("Please enter your Weight?");
         double weight = ConvertToDouble();
         Console.WriteLine();
