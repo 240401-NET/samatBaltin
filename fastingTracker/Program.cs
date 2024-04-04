@@ -22,7 +22,7 @@ class Program
             userInput = Console.ReadLine();
             userInput.ToLower();
 
-            //
+            //menu selection
             switch(userInput){
                 case "add":
                 Console.WriteLine("Add enterd ------------------------------------!");
