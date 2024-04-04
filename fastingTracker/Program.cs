@@ -25,8 +25,10 @@ class Program
             //menu selection
             switch(userInput){
                 case "add":
-                Console.WriteLine("Add enterd ------------------------------------!");
-
+                Console.WriteLine();
+                recordsList.Add(Logic.GenerateRecord());
+                Console.WriteLine();
+                Data.PersistRecord(recordsList);
                 break;
 
                 case "get":
@@ -34,13 +36,22 @@ class Program
                 Logic.DisplayAllRecords(recordsList);
                 Console.WriteLine();
                 break;
+                
+                case "delete":
+                Data.DeleteAllRecords();
+                Console.WriteLine("All records deleted");
+                recordsList.Clear();
+                Console.WriteLine();
+                break;
 
                 case "exit":
-                Console.WriteLine("Goodbye! ------------------------------------!");
+                Console.WriteLine("Goodbye!");
+                Console.WriteLine();
                 break;
 
                 default:
-                Console.WriteLine("Invalid selection! ------------------------------------!");
+                Console.WriteLine("Invalid selection!");
+                Console.WriteLine();
                 break;
             }
         }

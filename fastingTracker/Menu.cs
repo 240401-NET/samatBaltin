@@ -8,6 +8,7 @@ class Menu{
         Console.WriteLine("GET all records");
         Console.WriteLine("DELETE all records");
         Console.WriteLine("EXIT");
+        Console.WriteLine();
     }
 
 }

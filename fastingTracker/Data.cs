@@ -20,4 +20,9 @@ class Data{
             throw;
         }
     }
+
+    //delete all records
+    public static void DeleteAllRecords(){
+        File.Delete("RecordsDB.json");
+    }
 }

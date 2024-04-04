@@ -12,13 +12,13 @@ class Record{
     public int Ketones {get; set;}
     public int SystolicBloodPresure {get; set;}
     public int DiastolicBloodPresure {get; set;}
-    public int BathroomTaken {get; set;}
-    public int Botles {get; set;}
+    public int Bathroom {get; set;}
+    public int Bottles {get; set;}
     public string Symptoms {get; set;}
 
 
     //Constructor
-    public Record(double weight, double bmi, double muscleMass, double fatMass, double waterMass, int glucose, int ketones, int sbp, int dbp, int bathroomTaken, int botles, string symptoms){
+    public Record(double weight, double bmi, double muscleMass, double fatMass, double waterMass, int glucose, int ketones, int sbp, int dbp, int bathroom, int bottles, string symptoms){
         this.DateNow = DateTime.Today;
         this.Weight = weight;
         this.BMI = bmi;
@@ -29,12 +29,12 @@ class Record{
         this.Ketones = ketones;
         this.SystolicBloodPresure = sbp;
         this.DiastolicBloodPresure = dbp;
-        this.BathroomTaken = bathroomTaken;
-        this.Botles = botles;
+        this.Bathroom = bathroom;
+        this.Bottles = bottles;
         this.Symptoms = symptoms;
     }
 
-    public Record(DateTime date, double weight, double bmi, double muscleMass, double fatMass, double waterMass, int glucose, int ketones, int sbp, int dbp, int bathroomTaken, int botles, string symptoms){
+    public Record(DateTime date, double weight, double bmi, double muscleMass, double fatMass, double waterMass, int glucose, int ketones, int sbp, int dbp, int bathroom, int bottles, string symptoms){
         this.DateNow = date;
         this.Weight = weight;
         this.BMI = bmi;
@@ -45,8 +45,8 @@ class Record{
         this.Ketones = ketones;
         this.SystolicBloodPresure = sbp;
         this.DiastolicBloodPresure = dbp;
-        this.BathroomTaken = bathroomTaken;
-        this.Botles = botles;
+        this.Bathroom = bathroom;
+        this.Bottles = bottles;
         this.Symptoms = symptoms;
     }
 
@@ -65,8 +65,8 @@ class Record{
         $"\nGlucose Level: {Glucose}mg/dl;" +
         $"\nKetones Level: {Ketones}mg/dl;" +
         $"\nBlood Presure: {SystolicBloodPresure}/{DiastolicBloodPresure};" +
-        $"\nBathroom: {BathroomTaken} times;" +
-        $"\nBottles of Water: {Botles} botles;" +
+        $"\nBathroom: {Bathroom} times;" +
+        $"\nBottles of Water: {Bottles} botles;" +
         $"\nHow I feel Today: {Symptoms}";
     }
 }
