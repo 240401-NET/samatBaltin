@@ -32,7 +32,7 @@ class Logic{
         double fatMass = ConvertToDouble();
         Console.WriteLine();
 
-        Console.WriteLine("Please enter your Watar Mass?");
+        Console.WriteLine("Please enter your Water Mass?");
         double waterMass = ConvertToDouble();
         Console.WriteLine();
 
@@ -56,7 +56,7 @@ class Logic{
         int bathroom = ConvertToInt();
         Console.WriteLine();
 
-        Console.WriteLine("How many bottles of water?");
+        Console.WriteLine("How many bottles of water you drink?");
         int bottles = ConvertToInt();
         Console.WriteLine();
 
