@@ -4,8 +4,45 @@ class Program
 {
     static void Main(string[] args)
     {
-        Record record1 = new Record (200.0, 36.8, 135.8, 65.2, 100, 87, 5, 119, 78, 4, 4, "little headache");
-        Data.AddNewRecord(record1);
-        Console.WriteLine(record1.ToString());
+        //Retrieving all records if exist
+        List<Record> recordsList = new();
+        try {
+            recordsList = Data.GetAllRecords();
+        } catch (Exception e){
+            Console.WriteLine(e);
+        }
+        
+        string userInput = "";
+
+        while (!userInput.Equals("exit")){
+            //Display menu
+            Menu.PringMenu();
+
+            //Read user input
+            userInput = Console.ReadLine();
+            userInput.ToLower();
+
+            //
+            switch(userInput){
+                case "add":
+                Console.WriteLine("Add enterd ------------------------------------!");
+
+                break;
+
+                case "get":
+                // Console.WriteLine("GET entered ------------------------------------!");
+                Logic.DisplayAllRecords(recordsList);
+                Console.WriteLine();
+                break;
+
+                case "exit":
+                Console.WriteLine("Goodbye! ------------------------------------!");
+                break;
+
+                default:
+                Console.WriteLine("Invalid selection! ------------------------------------!");
+                break;
+            }
+        }
     }
 }

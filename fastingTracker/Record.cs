@@ -16,6 +16,7 @@ class Record{
     public int Botles {get; set;}
     public string Symptoms {get; set;}
 
+
     //Constructor
     public Record(double weight, double bmi, double muscleMass, double fatMass, double waterMass, int glucose, int ketones, int sbp, int dbp, int bathroomTaken, int botles, string symptoms){
         this.DateNow = DateTime.Today;
@@ -33,6 +34,25 @@ class Record{
         this.Symptoms = symptoms;
     }
 
+    public Record(DateTime date, double weight, double bmi, double muscleMass, double fatMass, double waterMass, int glucose, int ketones, int sbp, int dbp, int bathroomTaken, int botles, string symptoms){
+        this.DateNow = date;
+        this.Weight = weight;
+        this.BMI = bmi;
+        this.MuscleMass = muscleMass;
+        this.FatMass = fatMass;
+        this.WaterMass = waterMass;
+        this.Glucose = glucose;
+        this.Ketones = ketones;
+        this.SystolicBloodPresure = sbp;
+        this.DiastolicBloodPresure = dbp;
+        this.BathroomTaken = bathroomTaken;
+        this.Botles = botles;
+        this.Symptoms = symptoms;
+    }
+
+    //default constructor
+    public Record(){}
+
     //Convert record object to string
     public override string ToString()
     {
@@ -45,8 +65,8 @@ class Record{
         $"\nGlucose Level: {Glucose}mg/dl;" +
         $"\nKetones Level: {Ketones}mg/dl;" +
         $"\nBlood Presure: {SystolicBloodPresure}/{DiastolicBloodPresure};" +
-        $"\nBathroom Taken: {BathroomTaken} times;" +
-        $"\nBottles of Water Consumed: {Botles} botles;" +
+        $"\nBathroom: {BathroomTaken} times;" +
+        $"\nBottles of Water: {Botles} botles;" +
         $"\nHow I feel Today: {Symptoms}";
     }
 }
