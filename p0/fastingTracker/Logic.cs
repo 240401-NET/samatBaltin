@@ -1,11 +1,11 @@
 namespace fastingTracker;
 
-class Logic{
-    public static void DisplayAllRecords(List<Record> records){
+public class Logic{
+    public static void DisplayAllRecords(List<FastingRecord> records){
         if(records.Count > 0 ){
-            foreach(Record record in records){
+            foreach(FastingRecord FastingRecord in records){
                 Console.WriteLine();
-                Console.WriteLine(record);
+                Console.WriteLine(FastingRecord);
                 Console.WriteLine();
             }
         } else {
@@ -14,7 +14,7 @@ class Logic{
         }
     }
 
-    public static Record GenerateRecord(){
+    public static FastingRecord GenerateRecord(){
         Console.WriteLine($"Hi! Today is {DateTime.Today.ToString("dd'/'MM'/'yyyy")}.");
         Console.WriteLine("Please enter your Weight?");
         double weight = ConvertToDouble();
@@ -64,7 +64,7 @@ class Logic{
         string symptoms = ValidateString();
         Console.WriteLine();
 
-        return new Record(weight, bmi, muscleMass, fatMass, waterMass, glucose, ketones, sbp, dbp, bathroom, bottles, symptoms);
+        return new FastingRecord(weight, bmi, muscleMass, fatMass, waterMass, glucose, ketones, sbp, dbp, bathroom, bottles, symptoms);
     }
 
     public static double ConvertToDouble(){
@@ -72,7 +72,7 @@ class Logic{
             return Convert.ToDouble(Console.ReadLine());
         } catch (Exception e){
             Console.WriteLine(e.Message);
-            return -1;
+            return 0;
         }
     }
         public static int ConvertToInt(){
@@ -80,7 +80,7 @@ class Logic{
             return Convert.ToInt32(Console.ReadLine());
         } catch (Exception e){
             Console.WriteLine(e.Message);
-            return -1;
+            return 0;
         }
     }
     public static string ValidateString(){

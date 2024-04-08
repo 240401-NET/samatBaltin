@@ -1,6 +1,6 @@
 namespace fastingTracker;
 
-class Record{
+public class FastingRecord{
 
     public DateTime DateNow {get; set;}
     public double Weight {get; set;}
@@ -18,7 +18,7 @@ class Record{
 
 
     //Constructor
-    public Record(double weight, double bmi, double muscleMass, double fatMass, double waterMass, int glucose, int ketones, int sbp, int dbp, int bathroom, int bottles, string symptoms){
+    public FastingRecord(double weight, double bmi, double muscleMass, double fatMass, double waterMass, int glucose, int ketones, int sbp, int dbp, int bathroom, int bottles, string symptoms){
         this.DateNow = DateTime.Today;
         this.Weight = weight;
         this.BMI = bmi;
@@ -34,7 +34,7 @@ class Record{
         this.Symptoms = symptoms;
     }
 
-    public Record(DateTime date, double weight, double bmi, double muscleMass, double fatMass, double waterMass, int glucose, int ketones, int sbp, int dbp, int bathroom, int bottles, string symptoms){
+    public FastingRecord(DateTime date, double weight, double bmi, double muscleMass, double fatMass, double waterMass, int glucose, int ketones, int sbp, int dbp, int bathroom, int bottles, string symptoms){
         this.DateNow = date;
         this.Weight = weight;
         this.BMI = bmi;
@@ -51,7 +51,7 @@ class Record{
     }
 
     //default constructor
-    public Record(){}
+    public FastingRecord(){}
 
     //Convert record object to string
     public override string ToString()

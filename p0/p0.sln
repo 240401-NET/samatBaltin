@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fastingTracker", "fastingTracker\fastingTracker.csproj", "{F924482B-7D6B-4FDD-8D89-CA1C01C63981}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fastingTrackerApp.test", "fastingTrackerApp.test\fastingTrackerApp.test.csproj", "{6EA0323B-9463-48CC-867E-997F2FB6149F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F924482B-7D6B-4FDD-8D89-CA1C01C63981}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F924482B-7D6B-4FDD-8D89-CA1C01C63981}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F924482B-7D6B-4FDD-8D89-CA1C01C63981}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F924482B-7D6B-4FDD-8D89-CA1C01C63981}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EA0323B-9463-48CC-867E-997F2FB6149F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EA0323B-9463-48CC-867E-997F2FB6149F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EA0323B-9463-48CC-867E-997F2FB6149F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EA0323B-9463-48CC-867E-997F2FB6149F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

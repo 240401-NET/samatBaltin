@@ -5,7 +5,7 @@ class Program
     static void Main(string[] args)
     {
         //Retrieving all records if exist
-        List<Record> recordsList = new();
+        List<FastingRecord> recordsList = new();
         try {
             recordsList = Data.GetAllRecords();
         } catch (Exception e){
