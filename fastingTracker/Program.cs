@@ -20,10 +20,10 @@ class Program
 
             //Read user input
             userInput = Console.ReadLine();
-            userInput.ToLower();
+            string str = userInput.ToLower();
 
             //menu selection
-            switch(userInput){
+            switch(str){
                 case "add":
                 Console.WriteLine();
                 recordsList.Add(Logic.GenerateRecord());
@@ -32,7 +32,6 @@ class Program
                 break;
 
                 case "get":
-                // Console.WriteLine("GET entered ------------------------------------!");
                 Logic.DisplayAllRecords(recordsList);
                 Console.WriteLine();
                 break;
