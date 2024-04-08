@@ -1,6 +1,6 @@
 namespace fastingTrackerApp.test;
 
-public class UnitTest1
+public class LogicTest
 {
     [Theory]
     [InlineData("200.2", 200.2)]
