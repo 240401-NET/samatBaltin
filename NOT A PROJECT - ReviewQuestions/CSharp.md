@@ -64,8 +64,11 @@ These questions are here to help you engage with the material. We will use these
 
 - What are exceptions? Why do we use them?
     - exception handling features help you deal with any unexpected or exceptional situations that occur when a program is running.
-    
+
 - Describe Try/Catch/Finally
+    - try – A try block encloses a section of code.
+    - catch – When an exception happens, the code within the Catch block executes.
+    - finally – The finally block enables the execution of specific code irrespective of exception.
 
 ### C# Intermediate
 - What is class in C#?
