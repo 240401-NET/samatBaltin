@@ -2,8 +2,8 @@
 These questions are here to help you engage with the material. We will use these questions to review and to prepare for QC
 ### .NET Platform
 - What is C#?
-    C# (C-sharp) is a cross-platform, open-source, object-oriented programming language developed by Microsoft. It's designed to work with the .NET platform, which is a software ecosystem for developing, compiling, and running application code. C# is used to create and use software components, including mobile applications, desktop applications, web applications, and games.
-    
+    - C# (C-sharp) is a cross-platform, open-source, object-oriented programming language developed by Microsoft. It's designed to work with the .NET platform, which is a software ecosystem for developing, compiling, and running application code. C# is used to create and use software components, including mobile applications, desktop applications, web applications, and games.
+
 - What is .NET Platform?
 - What is Intermediary Language (IL)?
 - what does .csproj file do?
