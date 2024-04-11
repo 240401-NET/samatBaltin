@@ -79,7 +79,7 @@ These questions are here to help you engage with the material. We will use these
         - All numeric data types
         - Boolean, Char, and Date
     - Reference types are data types that store references to data in a variable amount of memory. They are stored on the heap, which is a region of memory that is allocated and deallocated manually by the program. Reference types are passed by reference, which means that when they are assigned to a variable or passed to a method, the reference to the data is used, not the data itself.
-        - strings
+        - strings: they can't be changed after they're created. All of the String methods and C# operators that appear to modify a string actually return the results in a new string object.
         - Arrays
         - classes
     - The main differences between value types and reference types.
@@ -91,13 +91,44 @@ These questions are here to help you engage with the material. We will use these
 
 
 - What are some collections available in C#? (Beyond List)
+    - C# has many collection types, including arrays, lists, dictionaries, sets, queues, and stacks. Some of these collections are:
+        - List<T>: An indexable collection, meaning each element can be accessed using its index
+        - HashSet: is an unordered collection of unique elements. It is generally used when we want to prevent duplicate elements from being placed in the collection.
+        - ArrayList: A non-generic collection that contains data of any data type
+        - Queue: A collection that serves items using the first-in, first-out (FIFO) principle
+        - Stack: A collection that uses the last added element to be the first one to go
+        - Dictionary<TKey,TValue>: A generic collection and a basic implementation of IDictionary<TKey, TValue>
+
 - How do we achieve Abstraction in C#?
+    - In C#, abstraction is implemented using abstract classes and methods. An abstract class is a class that cannot be instantiated, and must be inherited by a derived class in order to be used. Abstract classes are created using the abstract keyword, and can contain both abstract and non-abstract members.
+
 - How do we achieve Encapsulation?
+    - In C#, encapsulation is achieved through the use of access modifiers, such as "private," "protected," and "internal". These modifiers define the scope and visibility of a class member:
+        - Private: Members can only be accessed within the class itself.
+        - Protected: Members can be accessed within the class and any derived classes.
+        - Internal: Members can be accessed within the same assembly.
+
 - How about Inheritance?
+    - inheritance is a key feature of Object-Oriented Programming (OOP) that allows you to create a new class from an existing class. 
+        - class Animal { fields and methods }
+        - class Dog : Animal{fields and methods of Animal and fields and methods of Dog }
+
 - Polymorphism in C#?
+    - Polymorphism in C# is a concept that allows a single interface to be used to refer to multiple implementations of a particular behavior. It occurs when multiple classes are related to each other by inheritance. For example, a base class called Animal could have a method called animalSound(), and derived classes of Animals could be Pigs, Cats, Dogs, or Birds. Each derived class could have its own implementation of animalSound(), and the base class method can be overridden by adding the virtual keyword to the method inside the base class.
+
 - What is overloading?
+    - Method overloading in C# is when a class has two or more methods with the same name but different parameters, numbers, or order.
+        - Constructor
+        - PlusMethod() that works for both int and double.
+
 - What is overriding?
-- What's the difference between overloading and overriding
+    - An override method provides a new implementation of the method inherited from a base class. 
+        - animalSound()
+
+- What's the difference between overloading and overriding?
+    - overloading occurs when methods in the same class have the same method name but different parameters
+    -  overriding occurs when two methods have the same method name and parameters.
+
 - What are properties?
 - What are fields?
 - What are methods?
