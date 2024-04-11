@@ -72,7 +72,24 @@ These questions are here to help you engage with the material. We will use these
 
 ### C# Intermediate
 - What is class in C#?
+    - A class is a data structure in C# that combines data variables and functions into a single unit. Instances of the class are known as objects. While a class is just a blueprint, the object is an actual instantiation of the class and contains data.
+
 - What are the difference between Value types and Reference types?
+    - Value types are data types that directly store data in a fixed amount of memory. They are stored on the stack, which is a region of memory that is allocated and deallocated automatically by the program. Value types are passed by value, which means that when they are assigned to a variable or passed to a method, a copy of the data is created and used.
+        - All numeric data types
+        - Boolean, Char, and Date
+    - Reference types are data types that store references to data in a variable amount of memory. They are stored on the heap, which is a region of memory that is allocated and deallocated manually by the program. Reference types are passed by reference, which means that when they are assigned to a variable or passed to a method, the reference to the data is used, not the data itself.
+        - strings
+        - Arrays
+        - classes
+    - The main differences between value types and reference types.
+        - Memory storage location: Value types are stored on the stack, while reference types are stored on the heap.
+        - Copying behavior: Value types create a copy of the data when they are assigned or passed, while reference types use the same instance of the data when they are assigned or passed.
+        - Equality comparison: Value types compare the data by value, while reference types compare the data by reference.
+        - Immutability vs. mutability: Value types are immutable, which means that they cannot be changed after they are created, while reference types are mutable, which means that they can be changed after they are created.
+        - Common use cases: Value types are used for simple and primitive data, such as numbers, booleans, and structs, while reference types are used for complex and dynamic data, such as objects, arrays, and classes.
+
+
 - What are some collections available in C#? (Beyond List)
 - How do we achieve Abstraction in C#?
 - How do we achieve Encapsulation?
