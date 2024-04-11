@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseStatusTrackerAPI", "CaseStatusTrackerAPI\CaseStatusTrackerAPI.csproj", "{8C2E36C8-6F5B-4FCD-BAAE-37B8A24C38BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseStatusTrackerTest", "CaseStatusTrackerTest\CaseStatusTrackerTest.csproj", "{AD5E1008-796B-4210-BF0A-05AE7872C799}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C2E36C8-6F5B-4FCD-BAAE-37B8A24C38BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C2E36C8-6F5B-4FCD-BAAE-37B8A24C38BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C2E36C8-6F5B-4FCD-BAAE-37B8A24C38BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C2E36C8-6F5B-4FCD-BAAE-37B8A24C38BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD5E1008-796B-4210-BF0A-05AE7872C799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD5E1008-796B-4210-BF0A-05AE7872C799}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD5E1008-796B-4210-BF0A-05AE7872C799}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD5E1008-796B-4210-BF0A-05AE7872C799}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
