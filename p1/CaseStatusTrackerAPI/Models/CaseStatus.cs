@@ -1,8 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+
 namespace CaseStatusTrackerAPI.Models;
 
-public class CaseStatus{
-    public int StatusId {get; set;}
-    public string CaseId {get; set;}
-    public DateTime date {get; set;}
-    public string Message {get; set;}
+public partial class CaseStatus
+{
+    public int StatusId { get; set; }
+
+    public string? CaseId { get; set; }
+
+    public string? CaseStatus1 { get; set; }
+
+    public virtual CaseNumber? Case { get; set; }
 }
