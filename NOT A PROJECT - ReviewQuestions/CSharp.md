@@ -130,29 +130,92 @@ These questions are here to help you engage with the material. We will use these
     -  overriding occurs when two methods have the same method name and parameters.
 
 - What are properties?
+    - Properties are members of a class that encapsulate data and provide controlled access to it. They typically consist of a get accessor (getter) and a set accessor (setter) to read and modify the property's value.
+
 - What are fields?
+    - Fields are variables declared within a class or struct to store data. They represent the state of an object and can be accessed directly within the class.
+
 - What are methods?
+    - Methods are functions defined within a class or struct that perform specific actions or operations. They encapsulate behavior and can be called to execute their functionality.
+
 - What is constructor?
+    - A constructor is a special method used to initialize objects of a class. It is automatically called when an instance of the class is created and is responsible for initializing the object's state.
+
 - Describe 4 commonly used access modifiers in C#
+    - public: Accessible from any other code in the same assembly or another assembly.
+    - private: Accessible only from within the same class or struct.
+    - protected: Accessible only from within the same class or from derived classes.
+    - internal: Accessible from any code in the same assembly but not from outside the assembly.
+
 - what does static modifier do?
+    - Static modifier: The static modifier indicates that a member belongs to the type itself rather than to instances of the type. It means the member is shared among all instances of the class and can be accessed directly using the class name.
+
 - (T/F) It is perfectly fine to always use the implicit typing instead of strongly typing my variables
+    - False. While implicit typing (var keyword) can improve code readability and maintainability in certain scenarios, it's essential to use it judiciously and maintain clarity and explicitness in code where necessary.
+
 - What is regular expressions? Give me some use cases for regex's.
+    - Regular expressions are patterns used to match character combinations in strings. They provide a powerful and flexible way to search, manipulate, and validate text data. Use cases include:
+        - Validating input (e.g., email addresses, phone numbers)
+        - Extracting data from strings (e.g., parsing log files)
+        - Finding and replacing text (e.g., text processing)
+
 - Bonus: What could be an regEx for validating the email address?
+    - ^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$
+
 - What is unmanaged resource and how do you manage it?
+    - An unmanaged resource is a resource (such as memory, file handles, network connections) that is not managed by the .NET runtime's garbage collector. It requires manual management, including allocation, deallocation, and cleanup, to prevent resource leaks and ensure proper resource utilization.
+
 - What is serialization?
+    - Serialization is the process of converting an object into a format that can be easily persisted, transmitted, or stored, such as JSON, XML, or binary. It allows objects to be written to streams or files and reconstructed later.
+
 - what are generic classes?
+    - Generic classes are classes that are parameterized with one or more type parameters. They enable code reusability by allowing classes to be defined with placeholders for data types, making them more flexible and versatile.
+
 - what is boxing  and unboxing?
+    - Boxing is the process of converting a value type (e.g., int, double) into an object reference. Unboxing is the reverse process, converting an object reference back to a value type. These conversions involve copying the value from the stack to the heap (boxing) or from the heap to the stack (unboxing).
+
 - what's a struct, and how is it different from class?
+    - A struct is a value type that represents a lightweight data structure. It is similar to a class but is typically used for small, simple data types. Unlike classes, structs are value types and are typically used for immutable data types or when memory allocation overhead needs to be minimized.
+
 - What is lambda expression?
+    - A lambda expression is an anonymous function that can be used to create delegates or expression tree types. It provides a concise syntax for writing inline functions without explicitly defining a separate method.
+
 ### Testing
 - what do you use to unit test in C#?
+    - NUnit, MSTest, xUnit.net are commonly used frameworks for unit testing in C#.
+
 - Describe AAA of unit testing
+    - AAA stands for Arrange, Act, and Assert, representing the three phases of a unit test.
+        - Arrange: Set up the test environment, including creating objects and initializing variables.
+        - Act: Execute the code being tested.
+        - Assert: Verify that the expected behavior occurred and the outcome is as expected.
+
 - What do you unit test?
+    - Unit tests should focus on testing individual units of code, such as methods or functions, in isolation. They should verify the behavior of the unit under different conditions and edge cases.
+
 - What do you NOT unit test?
+    - Unit tests should not depend on external dependencies, such as databases, network connections, or file systems. Integration tests are more suitable for testing interactions between components or external systems.
+
 ### Design Principles
 - Describe SOLID
+    - SOLID is a set of five design principles in object-oriented programming:
+    - Single Responsibility Principle
+    - Open/Closed Principle
+    - Liskov Substitution Principle
+    - Interface Segregation Principle
+    - Dependency Inversion Principle
+
 - What is Singleton pattern, and when do we use it?
+    - The Singleton pattern ensures that a class has only one instance and provides a global point of access to that instance. It is typically used when exactly one object is needed to coordinate actions across the system.
+
 - what is factory method pattern, and when do we use it?
+    - The Factory Method pattern defines an interface for creating objects but allows subclasses to alter the type of objects that will be created. It is commonly used when a class cannot anticipate the class of objects it must create.
+
 - what is dependency injection, and why do we use it?
+    - Dependency injection is a design pattern in which dependencies of a class are provided from the outside rather than created internally. It promotes loose coupling between components and facilitates unit testing and maintainability.
+
 - How is dependency injection differ from dependency inversion?
+    - Dependency inversion is a principle that states high-level modules should not depend on low-level modules but should depend on abstractions. It decouples modules by allowing them to depend on interfaces or abstract classes rather than concrete implementations.
+
 - what is separation of concerns principle?
+    - The Separation of Concerns principle states that a class or module should have a single responsibility and should not be responsible for multiple unrelated tasks. It promotes modular design and maintainability by isolating different concerns.

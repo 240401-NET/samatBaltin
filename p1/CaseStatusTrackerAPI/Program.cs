@@ -1,4 +1,4 @@
-using CaseStatusTrackerAPI.Models;
+using CaseStatusTrackerAPI;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

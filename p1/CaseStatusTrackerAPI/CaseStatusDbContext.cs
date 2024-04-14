@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace CaseStatusTrackerAPI.Models;
+namespace CaseStatusTrackerAPI;
 
 public partial class CaseStatusDbContext : DbContext
 {

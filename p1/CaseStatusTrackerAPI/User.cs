@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CaseStatusTrackerAPI.Models;
+namespace CaseStatusTrackerAPI;
 
 public partial class User
 {
