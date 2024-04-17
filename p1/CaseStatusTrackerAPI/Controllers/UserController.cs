@@ -4,7 +4,7 @@ using CaseStatusTrackerAPI.Data;
 namespace CaseStatusTrackerAPI.Controllers;
 
 [ApiController]
-// [Route("")]
+[Route("[controller]")]
 public class UserController : ControllerBase
 {
     private IUserRepository _userRepo;
@@ -31,5 +31,16 @@ public class UserController : ControllerBase
     }
 
 
-    
+    [HttpPost]
+    [ProducesResponseType(StatusCodes.Status201Created)]
+    public void createUser([FromBody] User user){
+        _userRepo.CreateUser(user); 
+    }
+
+    [HttpDelete("delete")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    public void deleteUserById([FromQuery] int userId){
+        _userRepo.deleteUserById(userId); 
+    }
+
 }

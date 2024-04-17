@@ -8,9 +8,10 @@ public class UserRepository : IUserRepository {
         _context = context;
     }
 
-    public void DeleteUser(int userId)
+    public void deleteUserById(int userId)
     {
-        throw new NotImplementedException();
+        _context.Users.Remove(GetUserById(userId));
+        _context.SaveChanges();
     }
 
     public User GetUserById(int userId)
@@ -22,9 +23,10 @@ public class UserRepository : IUserRepository {
         return _context.Users.ToList();
     }
 
-    public void InsertUser(User user)
+    public void CreateUser(User user)
     {
-        throw new NotImplementedException();
+        _context.Users.Add(user);
+        _context.SaveChanges();
     }
 
     public void Save()
