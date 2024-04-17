@@ -15,7 +15,7 @@ public class UserRepository : IUserRepository {
 
     public User GetUserById(int userId)
     {
-        throw new NotImplementedException();
+        return _context.Users.Find(userId);
     }
 
     public IEnumerable<User> GetAllUsers(){

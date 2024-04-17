@@ -7,17 +7,27 @@ namespace CaseStatusTrackerAPI.Controllers;
 // [Route("")]
 public class UserController : ControllerBase
 {
-    private IUserRepository _userRepository;
+    private IUserRepository _userRepo;
 
     public UserController(IUserRepository userRepository)
     {
-        _userRepository = userRepository;
+        _userRepo = userRepository;
     }
 
+    //Retrieve all users
     [HttpGet("getAllUsers")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
     public IEnumerable<User> Get()
     {
-        var model = _userRepository.GetAllUsers();
+        var model = _userRepo.GetAllUsers();
         return model;
     }
+
+    //Find user by Id
+    [HttpGet("getUserById")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    public User getUserById([FromQuery] int userId){
+        return _userRepo.GetUserById(userId);
+    }
+
 }
