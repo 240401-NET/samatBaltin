@@ -9,7 +9,7 @@ builder.Services.AddDbContext<CaseStatusDbContext>(options => options.UseSqlServ
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<IUserRepository, UserRepository>();
+// builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();

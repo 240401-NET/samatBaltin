@@ -8,15 +8,19 @@ public class UserRepository : IUserRepository {
         _context = context;
     }
 
-    public void deleteUserById(int userId)
+    public void DeleteUserById(int userId)
     {
-        _context.Users.Remove(GetUserById(userId));
-        _context.SaveChanges();
+        var entity = GetUserById(userId);
+        if(entity != null){
+            _context.Users.Remove(entity);
+            _context.SaveChanges();
+        }
     }
 
-    public User GetUserById(int userId)
+    public User? GetUserById(int userId)
     {
         return _context.Users.Find(userId);
+        
     }
 
     public IEnumerable<User> GetAllUsers(){

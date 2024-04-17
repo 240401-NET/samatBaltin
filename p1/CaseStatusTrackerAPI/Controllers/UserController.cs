@@ -26,7 +26,7 @@ public class UserController : ControllerBase
     //Find user by Id
     [HttpGet("getUserById")]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    public User getUserById([FromQuery] int userId){
+    public User? getUserById([FromQuery] int userId){
         return _userRepo.GetUserById(userId);
     }
 
@@ -40,12 +40,12 @@ public class UserController : ControllerBase
     [HttpDelete("deleteUser")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public void deleteUserById([FromQuery] int userId){
-        _userRepo.deleteUserById(userId); 
+        _userRepo.DeleteUserById(userId); 
     }
 
     [HttpPut("updateUser")]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    public void UpdateUser([FromBody] User user){
+    public void updateUser([FromBody] User user){
         _userRepo.UpdateUser(user); 
     }
 }
