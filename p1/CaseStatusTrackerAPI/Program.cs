@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddDbContext<CaseStatusDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString(File.ReadAllText("Ignore.md"))));
+builder.Services.AddDbContext<CaseStatusDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString(File.ReadAllText("dbConnection.md"))));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddScoped<IUserRepository, UserRepository>();
