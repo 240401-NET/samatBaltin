@@ -1,7 +1,7 @@
 namespace CaseStatusTrackerAPI.Data;
 
-public interface IUserRepository : IDisposable{
-    IEnumerable<User> GetUsers();
+public interface IUserRepository {
+    IEnumerable<User> GetAllUsers();
     User GetUserById(int userId);
     void InsertUser(User user);
     void DeleteUser(int userId);

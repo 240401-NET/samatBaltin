@@ -1,26 +1,23 @@
-// using Microsoft.AspNetCore.Mvc;
-// using CaseStatusTrackerAPI.Data;
+using Microsoft.AspNetCore.Mvc;
+using CaseStatusTrackerAPI.Data;
 
-// namespace CaseStatusTrackerAPI.Controllers;
+namespace CaseStatusTrackerAPI.Controllers;
 
-// [ApiController]
-// [Route("[controller]")]
-// public class UserController : ControllerBase
-// {
-//     private IUserRepository _userRepository;
-//     private readonly ILogger<UserController> _logger;
+[ApiController]
+// [Route("")]
+public class UserController : ControllerBase
+{
+    private IUserRepository _userRepository;
 
-//     public UserController(IUserRepository userRepository, ILogger<UserController> logger)
-//     {
-//         _userRepository = userRepository;
-//         _logger = logger;
-//     }
+    public UserController(IUserRepository userRepository)
+    {
+        _userRepository = userRepository;
+    }
 
-//     [HttpGet(Name = "GetUsers")]
-//     public IEnumerable<User> Get()
-//     {
-//         Console.WriteLine("Controller called");
-//         var model = _userRepository.GetUsers();
-//         return model;
-//     }
-// }
+    [HttpGet("getAllUsers")]
+    public IEnumerable<User> Get()
+    {
+        var model = _userRepository.GetAllUsers();
+        return model;
+    }
+}

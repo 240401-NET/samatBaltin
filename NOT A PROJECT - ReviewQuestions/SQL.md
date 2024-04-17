@@ -107,6 +107,7 @@ Define following terms and answer the questions in your own words, using any res
 	- Functions are reusable blocks of code that perform a specific task. They can accept parameters, perform calculations, and return a value.
     - Aggregate functions: Perform a calculation on a set of values and return a single value. 
 		Examples include SUM, AVG, COUNT, MAX, MIN.
+		SELECT CITY, Count(*) FROM Users Group By City
     - Take one or more values as input and return a single value.
 		Examples include CONCAT, UPPER, LOWER.
 	- The three different types of functions are Aggregate functions, Scalar functions, and Table-valued functions.

@@ -11,5 +11,5 @@ public partial class User
 
     public string Email { get; set; } = null!;
 
-    public virtual ICollection<CaseNumber> CaseNumbers { get; set; } = new List<CaseNumber>();
+    public virtual ICollection<Case> Cases { get; set; } = new List<Case>();
 }

@@ -15,7 +15,7 @@ public partial class CaseStatusDbContext : DbContext
     {
     }
 
-    public virtual DbSet<CaseNumber> CaseNumbers { get; set; }
+    public virtual DbSet<Case> Cases { get; set; }
 
     public virtual DbSet<CaseStatus> CaseStatuses { get; set; }
 
@@ -27,47 +27,61 @@ public partial class CaseStatusDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<CaseNumber>(entity =>
+        modelBuilder.Entity<Case>(entity =>
         {
-            entity.HasKey(e => e.CaseId).HasName("PK__CaseNumb__956FA6C926E9A326");
+            entity.HasKey(e => e.ReceiptNumber).HasName("PK__Cases__AE5529A50492247F");
 
-            entity.ToTable("CaseNumber", "CaseStatusApp");
+            entity.ToTable("Cases", "CaseStatusApp");
 
-            entity.Property(e => e.CaseId)
+            entity.Property(e => e.ReceiptNumber)
                 .HasMaxLength(32)
                 .IsUnicode(false)
-                .HasColumnName("caseId");
+                .HasColumnName("receiptNumber");
+            entity.Property(e => e.FormType)
+                .HasMaxLength(6)
+                .IsUnicode(false)
+                .HasColumnName("formType");
+            entity.Property(e => e.SubmittedDate)
+                .HasColumnType("datetime")
+                .HasColumnName("submittedDate");
             entity.Property(e => e.UserId).HasColumnName("userId");
 
-            entity.HasOne(d => d.User).WithMany(p => p.CaseNumbers)
+            entity.HasOne(d => d.User).WithMany(p => p.Cases)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__CaseNumbe__userI__5EBF139D");
+                .HasConstraintName("FK__Cases__userId__160F4887");
         });
 
         modelBuilder.Entity<CaseStatus>(entity =>
         {
-            entity.HasKey(e => e.StatusId).HasName("PK__CaseStat__36257A181670E0C6");
+            entity.HasKey(e => e.StatusId).HasName("PK__CaseStat__36257A18F98327C3");
 
             entity.ToTable("CaseStatus", "CaseStatusApp");
 
             entity.Property(e => e.StatusId).HasColumnName("statusId");
-            entity.Property(e => e.CaseId)
-                .HasMaxLength(32)
-                .IsUnicode(false)
-                .HasColumnName("caseId");
-            entity.Property(e => e.CaseStatus1)
+            entity.Property(e => e.CurrentCaseStatusDesc)
                 .HasMaxLength(1000)
                 .IsUnicode(false)
-                .HasColumnName("caseStatus");
+                .HasColumnName("currentCaseStatusDesc");
+            entity.Property(e => e.CurrentaseStatusText)
+                .HasMaxLength(256)
+                .IsUnicode(false)
+                .HasColumnName("currentaseStatusText");
+            entity.Property(e => e.ModifiedDate)
+                .HasColumnType("datetime")
+                .HasColumnName("modifiedDate");
+            entity.Property(e => e.ReceiptNumber)
+                .HasMaxLength(32)
+                .IsUnicode(false)
+                .HasColumnName("receiptNumber");
 
-            entity.HasOne(d => d.Case).WithMany(p => p.CaseStatuses)
-                .HasForeignKey(d => d.CaseId)
-                .HasConstraintName("FK__CaseStatu__caseI__619B8048");
+            entity.HasOne(d => d.ReceiptNumberNavigation).WithMany(p => p.CaseStatuses)
+                .HasForeignKey(d => d.ReceiptNumber)
+                .HasConstraintName("FK__CaseStatu__recei__18EBB532");
         });
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.UserId).HasName("PK__Users__CB9A1CFF71ABF484");
+            entity.HasKey(e => e.UserId).HasName("PK__Users__CB9A1CFF6AAC27EF");
 
             entity.ToTable("Users", "CaseStatusApp");
 

@@ -3,9 +3,13 @@ using System.Collections.Generic;
 
 namespace CaseStatusTrackerAPI;
 
-public partial class CaseNumber
+public partial class Case
 {
-    public string CaseId { get; set; } = null!;
+    public string ReceiptNumber { get; set; } = null!;
+
+    public string? FormType { get; set; }
+
+    public DateTime? SubmittedDate { get; set; }
 
     public int? UserId { get; set; }
 

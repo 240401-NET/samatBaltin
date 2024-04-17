@@ -1,54 +1,39 @@
 namespace CaseStatusTrackerAPI.Data;
 
 
-public class UserRepository : IUserRepository, IDisposable{
-    private CaseStatusDbContext context;
+public class UserRepository : IUserRepository {
+    private CaseStatusDbContext _context;
 
     public UserRepository (CaseStatusDbContext context){
-        this.context = context;
+        _context = context;
     }
 
-    public IEnumerable<User> GetUsers(){
-        IEnumerable<User> usersList = context.Users.ToList();
-        Console.WriteLine(usersList.Count());
-        foreach(User u in usersList){
-            Console.WriteLine(u);
-        }
-        return usersList;
+    public void DeleteUser(int userId)
+    {
+        throw new NotImplementedException();
     }
 
-    public User GetUserById(int userId){
-        return null;
+    public User GetUserById(int userId)
+    {
+        throw new NotImplementedException();
     }
-    public void InsertUser(User user){
 
+    public IEnumerable<User> GetAllUsers(){
+        return _context.Users.ToList();
     }
-    public void DeleteUser(int userId){
 
+    public void InsertUser(User user)
+    {
+        throw new NotImplementedException();
     }
-    public void UpdateUser(User user){
 
+    public void Save()
+    {
+        throw new NotImplementedException();
     }
-    public void Save(){
 
+    public void UpdateUser(User user)
+    {
+        throw new NotImplementedException();
     }
-    private bool disposed = false;
-
-        protected virtual void Dispose(bool disposing)
-        {
-            if (!this.disposed)
-            {
-                if (disposing)
-                {
-                    context.Dispose();
-                }
-            }
-            this.disposed = true;
-        }
-
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
-        }
 }
