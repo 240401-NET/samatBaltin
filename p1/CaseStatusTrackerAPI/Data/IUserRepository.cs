@@ -6,5 +6,4 @@ public interface IUserRepository {
     void CreateUser(User user);
     void deleteUserById(int userId);
     void UpdateUser(User user);
-    void Save();
 }

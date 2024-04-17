@@ -29,13 +29,13 @@ public class UserRepository : IUserRepository {
         _context.SaveChanges();
     }
 
-    public void Save()
-    {
-        throw new NotImplementedException();
-    }
-
     public void UpdateUser(User user)
     {
-        throw new NotImplementedException();
+        var entity = GetUserById(user.UserId);
+        if(entity != null){
+            entity.UserName = user.UserName;
+            entity.Email = user.Email;
+            _context.SaveChanges();
+        }
     }
 }

@@ -37,10 +37,15 @@ public class UserController : ControllerBase
         _userRepo.CreateUser(user); 
     }
 
-    [HttpDelete("delete")]
+    [HttpDelete("deleteUser")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public void deleteUserById([FromQuery] int userId){
         _userRepo.deleteUserById(userId); 
     }
 
+    [HttpPut("updateUser")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    public void UpdateUser([FromBody] User user){
+        _userRepo.UpdateUser(user); 
+    }
 }
