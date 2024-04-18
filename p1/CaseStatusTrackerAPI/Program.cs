@@ -2,6 +2,7 @@ using CaseStatusTrackerAPI;
 using CaseStatusTrackerAPI.Services;
 using CaseStatusTrackerAPI.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,7 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ICaseRepository, CaseRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ICaseService, CaseService>();
+builder.Services.AddHttpClient<UscisApiService>();
 builder.Services.AddControllers()
 .AddJsonOptions(options => {
     options.JsonSerializerOptions.ReferenceHandler =
@@ -38,3 +40,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+
