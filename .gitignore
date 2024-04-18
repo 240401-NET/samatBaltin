@@ -3,8 +3,11 @@
 ##
 ## Get latest from `dotnet new gitignore`
 
+
+##my secrets
 Ignore.md
 dbConnection.md
+appsettings.json
 
 # dotenv files
 .env

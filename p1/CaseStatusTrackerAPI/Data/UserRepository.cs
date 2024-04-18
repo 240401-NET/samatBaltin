@@ -1,8 +1,10 @@
+using Microsoft.EntityFrameworkCore;
+
 namespace CaseStatusTrackerAPI.Data;
 
 
 public class UserRepository : IUserRepository {
-    private CaseStatusDbContext _context;
+    private readonly CaseStatusDbContext _context;
 
     public UserRepository (CaseStatusDbContext context){
         _context = context;
@@ -19,18 +21,24 @@ public class UserRepository : IUserRepository {
 
     public User? GetUserById(int userId)
     {
-        return _context.Users.Find(userId);
-        
+        return _context.Users.
+            Include(u => u.Cases).
+            ThenInclude(c => c.CaseStatuses).
+            FirstOrDefault(u => u.UserId == userId);
     }
 
     public IEnumerable<User> GetAllUsers(){
-        return _context.Users.ToList();
+        return _context.Users.
+            Include(u => u.Cases).
+            ThenInclude(c => c.CaseStatuses).
+            ToList();
     }
 
-    public void CreateUser(User user)
+    public User CreateUser(User user)
     {
         _context.Users.Add(user);
         _context.SaveChanges();
+        return user;
     }
 
     public void UpdateUser(User user)

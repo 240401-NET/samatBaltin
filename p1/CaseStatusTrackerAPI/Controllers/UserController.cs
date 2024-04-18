@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using CaseStatusTrackerAPI.Data;
+using CaseStatusTrackerAPI.Services;
 
 namespace CaseStatusTrackerAPI.Controllers;
 
@@ -7,45 +7,47 @@ namespace CaseStatusTrackerAPI.Controllers;
 [Route("[controller]")]
 public class UserController : ControllerBase
 {
-    private IUserRepository _userRepo;
+    private IUserService _userService;
 
-    public UserController(IUserRepository userRepository)
+    public UserController(IUserService userService)
     {
-        _userRepo = userRepository;
+        _userService = userService;
     }
 
     //Retrieve all users
     [HttpGet("getAllUsers")]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    public IEnumerable<User> Get()
+    public ActionResult<IEnumerable<User>> GetAllUsers()
     {
-        var model = _userRepo.GetAllUsers();
-        return model;
+        return Ok(_userService.GetAllUsers());
     }
 
     //Find user by Id
     [HttpGet("getUserById")]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    public User? getUserById([FromQuery] int userId){
-        return _userRepo.GetUserById(userId);
+    public ActionResult<User?> getUserById([FromQuery] int userId){
+        User? user = _userService.GetUserById(userId);
+        return user is not null ? Ok(user) : NoContent();
     }
 
 
     [HttpPost]
-    [ProducesResponseType(StatusCodes.Status201Created)]
-    public void createUser([FromBody] User user){
-        _userRepo.CreateUser(user); 
+    public ActionResult<User> createUser([FromBody] User user){
+        User newUser = _userService.CreateUser(user); 
+        if(newUser != null){
+            Created();
+            return newUser;
+        }
+        return NoContent();
     }
 
     [HttpDelete("deleteUser")]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    public void deleteUserById([FromQuery] int userId){
-        _userRepo.DeleteUserById(userId); 
+    public ActionResult deleteUserById([FromQuery] int userId){
+        _userService.DeleteUserById(userId);
+        return NoContent();
     }
 
     [HttpPut("updateUser")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public void updateUser([FromBody] User user){
-        _userRepo.UpdateUser(user); 
+        _userService.UpdateUser(user); 
     }
 }

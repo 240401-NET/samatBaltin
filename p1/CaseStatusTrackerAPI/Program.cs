@@ -1,4 +1,5 @@
 using CaseStatusTrackerAPI;
+using CaseStatusTrackerAPI.Services;
 using CaseStatusTrackerAPI.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,8 +10,14 @@ builder.Services.AddDbContext<CaseStatusDbContext>(options => options.UseSqlServ
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddScoped<IUserRepository, UserRepository>();
-// builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddControllers();
+builder.Services.AddScoped<ICaseRepository, CaseRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<ICaseService, CaseService>();
+builder.Services.AddControllers()
+.AddJsonOptions(options => {
+    options.JsonSerializerOptions.ReferenceHandler =
+    System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+});
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

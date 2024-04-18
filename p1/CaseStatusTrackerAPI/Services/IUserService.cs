@@ -1,6 +1,6 @@
-namespace CaseStatusTrackerAPI.Data;
+namespace CaseStatusTrackerAPI.Services;
 
-public interface IUserRepository {
+public interface IUserService{
     IEnumerable<User> GetAllUsers();
     User? GetUserById(int userId);
     User CreateUser(User user);
