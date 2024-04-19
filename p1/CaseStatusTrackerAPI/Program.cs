@@ -15,6 +15,7 @@ builder.Services.AddScoped<ICaseRepository, CaseRepository>();
 builder.Services.AddScoped<ICaseStatusRepository, CaseStatusRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ICaseService, CaseService>();
+builder.Services.AddScoped<ICaseStatusService, CaseStatusService>();
 builder.Services.AddHttpClient<UscisApiService>();
 builder.Services.AddControllers()
 .AddJsonOptions(options => {
