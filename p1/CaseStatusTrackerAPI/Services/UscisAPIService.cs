@@ -46,16 +46,14 @@ public class UscisApiService
                 }
             }
         }
-        catch (HttpRequestException ex)
-        {
+        catch (HttpRequestException ex) {
             // Log the exception
             Console.WriteLine($"Error while obtaining access token: {ex.Message}");
             throw;
         }
     }
 
-    public async Task<string> GetCaseStatusAsync(string caseId)
-    {
+    public async Task<string> GetCaseStatusAsync(string caseId) {
         var accessToken = await GetAccessTokenAsync();
         // Include the access token in the request headers
         _httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
