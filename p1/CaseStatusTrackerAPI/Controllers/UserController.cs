@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using CaseStatusTrackerAPI.Services;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace CaseStatusTrackerAPI.Controllers;
 
@@ -7,18 +8,27 @@ namespace CaseStatusTrackerAPI.Controllers;
 [Route("[controller]")]
 public class UserController : ControllerBase
 {
-    private IUserService _userService;
+    private readonly IUserService _userService;
+    private IMemoryCache _memorycache;
 
-    public UserController(IUserService userService)
+    public UserController(IUserService userService, IMemoryCache memoryCache)
     {
         _userService = userService;
+        _memorycache = memoryCache;
     }
 
     //Retrieve all users
     [HttpGet("getAllUsers")]
     public ActionResult<IEnumerable<User>> GetAllUsers()
     {
-        return Ok(_userService.GetAllUsers());
+        IEnumerable<User> allUsers;
+        if(_memorycache.TryGetValue("allUsers", out allUsers)){
+            return Ok(allUsers);
+        } else {
+            allUsers = _userService.GetAllUsers();
+            _memorycache.Set("allUsers", allUsers, new TimeSpan(0,0,30));
+            return Ok(allUsers);
+        }
     }
 
     //Find user by Id
