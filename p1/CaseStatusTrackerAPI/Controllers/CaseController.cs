@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using CaseStatusTrackerAPI.Data;
 using CaseStatusTrackerAPI.Services;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace CaseStatusTrackerAPI.Controllers;
 
@@ -8,17 +8,26 @@ namespace CaseStatusTrackerAPI.Controllers;
 [Route("[controller]")]
 public class CaseController : ControllerBase
 {
-    private ICaseService _caseService;
+    private readonly ICaseService _caseService;
+    private IMemoryCache _memorycache;
 
-    public CaseController (ICaseService caseService){
+    public CaseController (ICaseService caseService, IMemoryCache memoryCache){
         _caseService = caseService;
+        _memorycache = memoryCache;
     }
 
     //get all cases
     [HttpGet("getAllCases")]
     public ActionResult GetAllCases()
     {
-        return Ok(_caseService.GetAllCases());
+        IEnumerable<Case> allCases;
+        if(_memorycache.TryGetValue("allCases", out allCases)){
+            return Ok(allCases);
+        } else {
+            allCases = _caseService.GetAllCases();
+            _memorycache.Set("allCases", allCases, new TimeSpan(0,0,30));
+            return Ok(allCases);
+        }
     }
 
     
