@@ -32,8 +32,7 @@ public class UscisApiService
             // Log the response content for inspection
             var responseContent = await response.Content.ReadAsStringAsync();
 
-            // Deserialize the response content into an object
-            // var responseStream = await response.Content.ReadAsStreamAsync();
+            // Extracting access token from the response content
             using (JsonDocument document = JsonDocument.Parse(responseContent)) {
                 JsonElement root = document.RootElement;
                 if (root.TryGetProperty("access_token", out JsonElement accessTokenElement)){
