@@ -40,15 +40,15 @@
 	- In CSS, rules consist of two main parts: selectors and declarations. Selectors specify the elements to which the styles should be applied, and declarations define the styles themselves. Declarations are made up of property-value pairs, where the property is the aspect of the element being styled (such as color, font-size, margin), and the value is the specific styling applied to that property (such as red, 16px, 10px). Multiple declarations can be grouped within curly braces ({ }) and separated by semicolons (;).
 - Describe following types of selectors and their syntax:
 	- Tag selector: Targets HTML elements based on their tag name.
-		Syntax: tagname { styles }
+		- Syntax: tagname { styles }
 	- Class selector: Targets HTML elements based on their class attribute.
-		Syntax: .classname { styles }
+		- Syntax: .classname { styles }
 	- Id selector: Targets HTML elements based on their id attribute.
-		Syntax: #idname { styles }
+		- Syntax: #idname { styles }
 	- Pseudo class selectors: Targets elements based on their state or position.
-		Syntax: selector:pseudo-class { styles }
+		- Syntax: selector:pseudo-class { styles }
 	- Combination selectors: Combines multiple selectors to target specific elements.
-		Syntax: selector1 selector2 { styles }
+		- Syntax: selector1 selector2 { styles }
 - Describe box model
 	- The box model in CSS describes the layout and design of elements on a webpage. It consists of four main components: content, padding, border, and margin. These components define the dimensions and spacing of an element within its containing block.
 		- Content:
