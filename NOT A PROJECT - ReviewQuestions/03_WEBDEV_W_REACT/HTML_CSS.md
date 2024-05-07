@@ -13,7 +13,7 @@
 		- img: Defines an image.
 		- h1, ..., h6: Define headings of different levels.
 - how are tags different from elements?
-	- Tags are the markup syntax used to define elements in HTML, while elements consist of the opening tag, content, and closing tag combined. For example, '<p>' is a tag, while '<p>Hello</p>' is an element.
+	- Tags are the markup syntax used to define elements in HTML, while elements consist of the opening tag, content, and closing tag combined. For example, ' p ' is a tag, while ' p>Hello</p ' is an element.
 - what are attributes?
 - What are global attributes?
 - What is the difference between id attribute and class attribute?
