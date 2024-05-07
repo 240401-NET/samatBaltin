@@ -4,7 +4,7 @@
 	- HTML stands for Hypertext Markup Language. It is the standard markup language for creating web pages and web applications. HTML is used to structure the content of web pages by defining different elements and their relationships.
 - What are html tags? Give me examples of common tags
 	- HTML tags are keywords surrounded by angle brackets (<>) used to define elements within an HTML document. Examples of common HTML tags include:
-		- "<html>": Defines the root of an HTML document.
+		- <html>: Defines the root of an HTML document.
 		- '<head>': Contains metadata about the HTML document.
 		- '<body>': Contains the content of the HTML document.
 		- '<div>': Defines a division or a section.
