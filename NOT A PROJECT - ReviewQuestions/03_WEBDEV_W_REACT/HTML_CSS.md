@@ -1,4 +1,4 @@
-# HTML
+## HTML
 - What is HTML, and what do we use html for?
 	- HTML stands for Hypertext Markup Language. It is the standard markup language for creating web pages and web applications. HTML is used to structure the content of web pages by defining different elements and their relationships.
 - What are html tags? Give me examples of common tags
@@ -29,7 +29,7 @@
 	- To accept user input, you can use the HTML <form> element along with various input elements like input, textarea, select, and button. These elements allow users to input data such as text, numbers, checkboxes, radio buttons, and submit buttons. When a user submits the form, the data is typically sent to a server for processing using HTTP methods like GET or POST.
 
 
-# CSS
+## CSS
 - What is CSS? What's the purpose of CSS in a webpage?
 	- CSS stands for Cascading Style Sheets. It is a style sheet language used for describing the presentation of a document written in HTML. CSS controls the layout, formatting, and appearance of elements on a webpage. 
 	- Its purpose is to separate the content of a webpage from its presentation, allowing for greater flexibility and control over the visual aspects of the website.
@@ -50,13 +50,13 @@
 		- Syntax: selector1 selector2 { styles }
 - Describe box model
 	- The box model in CSS describes the layout and design of elements on a webpage. It consists of four main components: content, padding, border, and margin. These components define the dimensions and spacing of an element within its containing block.
-		### Content:
-		- The actual content of the HTML element, such as text, images, or other media.
-		- It is surrounded by padding, border, and margin.
-		### Padding:
-		- The space between the content and the element's border.
-		- Padding can be adjusted using the padding property in CSS.
-		- It helps create space within the element and separates the content from the border.
+		- Content:
+			- The actual content of the HTML element, such as text, images, or other media.
+			- It is surrounded by padding, border, and margin.
+		- Padding:
+			- The space between the content and the element's border.
+			- Padding can be adjusted using the padding property in CSS.
+			- It helps create space within the element and separates the content from the border.
 		- Border:
 			- A border that surrounds the padding and content of the element.
 			- Borders can have different styles (solid, dashed, etc.), widths, and colors.
