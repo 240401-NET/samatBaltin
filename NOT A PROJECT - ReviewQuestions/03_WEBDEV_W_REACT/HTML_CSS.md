@@ -52,10 +52,23 @@
 - Describe box model
 	- The box model in CSS describes the layout and design of elements on a webpage. It consists of four main components: content, padding, border, and margin. These components define the dimensions and spacing of an element within its containing block.
 		- Content:
-			The actual content of the HTML element, such as text, images, or other media.
-			It is surrounded by padding, border, and margin.
+			- The actual content of the HTML element, such as text, images, or other media.
+			- It is surrounded by padding, border, and margin.
+		- Padding:
+			- The space between the content and the element's border.
+			- Padding can be adjusted using the padding property in CSS.
+			- It helps create space within the element and separates the content from the border.
+		- Border:
+			- A border that surrounds the padding and content of the element.
+			- Borders can have different styles (solid, dashed, etc.), widths, and colors.
+			- Border properties include border-width, border-style, and border-color.
+		- Margin:
+			- The space between the element's border and adjacent elements.
+			- Margins create space between elements and help control layout and spacing.
+			- Margins can be adjusted using the margin property in CSS.
 - What is responsive web design
-- Play this game: https://flexboxfroggy.com/
-- Play this game: https://cssgridgarden.com/
+	- Responsive web design is an approach to web development aimed at creating web pages that provide an optimal viewing experience across a wide range of devices and screen sizes. The goal of responsive web design is to ensure that websites look and function well on desktop computers, laptops, tablets, and smartphones, without the need for separate designs or development efforts for each device.
 - What do we mean by cascading in CSS?
+	- Cascading in CSS refers to the process by which multiple style rules are applied to the same HTML element, and the browser determines which styles to apply based on certain factors like specificity and order. Cascading allows styles to "cascade" from one rule to another, with later rules potentially overriding earlier ones.
 - What is specificity in CSS?
+	- Specificity in CSS is a measure of how specific a selector is in targeting HTML elements. It determines which style rules take precedence when multiple conflicting rules apply to the same element. Specificity is calculated based on the types of selectors used in a rule. Generally, the more specific a selector is, the higher its specificity, and the more likely it is to override less specific rules. Specificity is crucial for understanding how styles cascade and which styles will be applied to elements on a webpage.
