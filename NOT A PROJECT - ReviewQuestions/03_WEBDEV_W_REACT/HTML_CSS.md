@@ -1,8 +1,19 @@
 # HTML_CSS
 ## HTML
 - What is HTML, and what do we use html for?
+	- HTML stands for Hypertext Markup Language. It is the standard markup language for creating web pages and web applications. HTML is used to structure the content of web pages by defining different elements and their relationships.
 - What are html tags? Give me examples of common tags
+	- HTML tags are keywords surrounded by angle brackets (<>) used to define elements within an HTML document. Examples of common HTML tags include:
+		- '<html>': Defines the root of an HTML document.
+		- '<head>': Contains metadata about the HTML document.
+		- '<body>': Contains the content of the HTML document.
+		- '<div>': Defines a division or a section.
+		- '<p>': Defines a paragraph.
+		- '<a>': Defines a hyperlink.
+		- '<img>': Defines an image.
+		- '<h1>', ..., '<h6>': Define headings of different levels.
 - how are tags different from elements?
+	- Tags are the markup syntax used to define elements in HTML, while elements consist of the opening tag, content, and closing tag combined. For example, '<p>' is a tag, while '<p>Hello</p>' is an element.
 - what are attributes?
 - What are global attributes?
 - What is the difference between id attribute and class attribute?
