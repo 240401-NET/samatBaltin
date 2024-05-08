@@ -1,0 +1,68 @@
+## CSS
+- What is CSS? What's the purpose of CSS in a webpage?
+	- CSS stands for Cascading Style Sheets. It is a style sheet language used for describing the presentation of a document written in HTML. CSS controls the layout, formatting, and appearance of elements on a webpage. 
+	- Its purpose is to separate the content of a webpage from its presentation, allowing for greater flexibility and control over the visual aspects of the website.
+- what are selectors?
+	- Selectors are patterns used to select and style HTML elements on a webpage. They specify which elements the CSS rules should apply to. Selectors can target elements based on their tag names, classes, IDs, attributes, or their relationship with other elements in the document.
+- What are rules?
+	- In CSS, rules consist of two main parts: selectors and declarations. Selectors specify the elements to which the styles should be applied, and declarations define the styles themselves. Declarations are made up of property-value pairs, where the property is the aspect of the element being styled (such as color, font-size, margin), and the value is the specific styling applied to that property (such as red, 16px, 10px). Multiple declarations can be grouped within curly braces ({ }) and separated by semicolons (;).
+- Describe following types of selectors and their syntax:
+	- Tag selector: Targets HTML elements based on their tag name.
+		- Syntax: tagname { styles }
+	- Class selector: Targets HTML elements based on their class attribute.
+		- Syntax: .classname { styles }
+	- Id selector: Targets HTML elements based on their id attribute.
+		- Syntax: #idname { styles }
+	- Pseudo class selectors: Targets elements based on their state or position.
+		- Syntax: selector:pseudo-class { styles }
+	- Combination selectors: Combines multiple selectors to target specific elements.
+		- Syntax: selector1 selector2 { styles }
+- Describe box model
+	- The box model in CSS describes the layout and design of elements on a webpage. It consists of four main components: content, padding, border, and margin. These components define the dimensions and spacing of an element within its containing block.
+		- Content:
+			- The actual content of the HTML element, such as text, images, or other media.
+			- It is surrounded by padding, border, and margin.
+		- Padding:
+			- The space between the content and the element's border.
+			- Padding can be adjusted using the padding property in CSS.
+			- It helps create space within the element and separates the content from the border.
+		- Border:
+			- A border that surrounds the padding and content of the element.
+			- Borders can have different styles (solid, dashed, etc.), widths, and colors.
+			- Border properties include border-width, border-style, and border-color.
+		- Margin:
+			- The space between the element's border and adjacent elements.
+			- Margins create space between elements and help control layout and spacing.
+			- Margins can be adjusted using the margin property in CSS.
+- What is responsive web design
+	- Responsive web design is an approach to web development aimed at creating web pages that provide an optimal viewing experience across a wide range of devices and screen sizes. The goal of responsive web design is to ensure that websites look and function well on desktop computers, laptops, tablets, and smartphones, without the need for separate designs or development efforts for each device.
+- What do we mean by cascading in CSS?
+	- Cascading in CSS refers to the process by which multiple style rules are applied to the same HTML element, and the browser determines which styles to apply based on certain factors like specificity and order. Cascading allows styles to "cascade" from one rule to another, with later rules potentially overriding earlier ones.
+- What is specificity in CSS?
+	- Specificity in CSS is a measure of how specific a selector is in targeting HTML elements. It determines which style rules take precedence when multiple conflicting rules apply to the same element. Specificity is calculated based on the types of selectors used in a rule. Generally, the more specific a selector is, the higher its specificity, and the more likely it is to override less specific rules. Specificity is crucial for understanding how styles cascade and which styles will be applied to elements on a webpage.
+
+- What are the 3 ways to introduce CSS styling to a site? Which is generally preferable?
+    - The three ways to introduce CSS styling to a site are:
+        1. Inline CSS: Adding styles directly to HTML elements using the style attribute.
+        2. Internal CSS: Including CSS rules within the <style> element in the <head> section of an HTML document.
+        3. External CSS: Linking an external CSS file to an HTML document using the <link> element.
+    External CSS is generally preferable as it separates the styling from the HTML content, making it easier to manage and maintain styles across multiple pages.
+- In what order do these 3 ways get prioritized?
+    - Inline CSS has the highest priority and will override styles defined in external or internal CSS.
+    - Internal CSS has the second-highest priority and will override styles defined in external CSS.
+    - External CSS has the lowest priority and will be overridden by styles defined in inline or internal CSS.
+- What are some of the selectors used in CSS?
+    - Type selectors (e.g., p, h1, div)
+    - Class selectors (e.g., .classname)
+    - ID selectors (e.g., #idname)
+    - Attribute selectors (e.g., [type="text"])
+    - Pseudo-classes (e.g., :hover, :nth-child())
+    - Pseudo-elements (e.g., ::before, ::after)
+- How do I select elements by their id?
+    - You can select elements by their id using the # symbol followed by the id name. For example: #myId { styles }.
+- How do I select elements by their class?
+    - You can select elements by their class using the . symbol followed by the class name. For example: .myClass { styles }.
+- How do I select elements by their type?
+    - You can select elements by their type (tag name) directly. For example: p { styles }.
+- How do CSS rules get selected when there are multiple conflicting rules?
+    - When there are multiple conflicting rules, CSS rules are selected based on specificity, where more specific selectors take precedence over less specific ones. If specificity is the same, the order of the rules in the CSS file determines which one is applied last.
