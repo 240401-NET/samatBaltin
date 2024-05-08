@@ -1,34 +1,4 @@
-## HTML
-- What is HTML?
-    - HTML stands for Hypertext Markup Language. It's the standard markup language for creating web pages and web applications. HTML provides the structure for web documents by using various tags to define elements on a webpage.
-- What are inline & block elements?
-    - Inline elements: These elements do not start on a new line and only take up as much width as necessary. Examples include <span>, <a>, <strong>, and <em>.
-    - Block elements: These elements start on a new line and take up the full width available. Examples include <div>, <p>, <h1> to <h6>, and <ul>.
-- What are the two main parts of an HTML document? What are their roles?
-    - The two main parts of an HTML document are the <head> and <body>.
-    - <head>: Contains metadata about the HTML document, such as title, links to stylesheets, scripts, and other information that is not displayed on the webpage.
-    - <body>: Contains the content of the HTML document that is displayed in the browser, including text, images, links, forms, and other elements.
-- How are images created in HTML?
-    - Images are created using the <img> tag in HTML. The <img> tag is a self-closing tag and requires the src attribute to specify the image file's path. Optionally, you can include attributes like alt for alternative text and width and height for specifying the image's dimensions.
-- How are links created in HTML?
-    - Links are created using the <a> (anchor) tag in HTML. The <a> tag requires the href attribute to specify the URL of the destination page. You can also include text or other HTML elements between the opening and closing <a> tags to create the clickable link.
-- How are lists created in HTML?
-    - Lists are created using the <ul> (unordered list) and <ol> (ordered list) tags in HTML.
-    <ul>: Defines an unordered list, where list items are displayed with bullets.
-    <ol>: Defines an ordered list, where list items are displayed with numbers or letters.
-    List items are defined using the <li> (list item) tag within <ul> or <ol>.
-- How are forms created in HTML?
-    - Forms are created using the <form> tag in HTML. The <form> tag encloses form elements such as input fields, buttons, checkboxes, and dropdown lists. Form elements use various input types and attributes to collect and submit data.
-- What features were introduced in HTML5?
-    - HTML5 introduced several new features and enhancements, including:
-    - Semantic elements like <header>, <footer>, <nav>, <article>, <section>, and <aside>.
-    - New form input types such as <input type="email">, <input type="url">, <input type="date">, etc.
-    - Multimedia elements like <audio> and <video> for embedding audio and video content.
-    - Canvas and SVG for drawing graphics and animations directly within the browser.
-    - Offline storage capabilities using localStorage and sessionStorage.
-    - Geolocation API for accessing the user's geographical location.
-    - WebSockets and WebRTC for real-time communication between clients.
-    - Improved support for accessibility and internationalization.
+
 
 ## Node
 - What is node? Why is it used?
