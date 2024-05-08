@@ -63,14 +63,7 @@
 
 
 ## Typescript
-- What is TS?
-- Is TS strongly or weakly typed?
-- Why should TS be used?
-- What datatypes are introduced in TS which are not in JS?
-- What are union types?
-- What are type guards?
-- What features does TS introduce apart from strong typing & new datatypes?
-- What are decorators?
+
 
 ## Node
 - What is node? Why is it used?
